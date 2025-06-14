@@ -43,9 +43,11 @@ function buildConicGradient(data, colors) {
 }
 
 function renderLegend(container, data, colors) {
-    container.innerHTML = "<ul>" + Object.entries(data).map(([key], i) => (
-        `<li><span style="background:${colors[i % colors.length]}"></span> ${key}</li>`
-    )).join("") + "</ul>";
+    const total = Object.values(data).reduce((a, b) => a + b, 0);
+    container.innerHTML = "<ul>" + Object.entries(data).map(([key, value], i) => {
+        const percentage = ((value / total) * 100).toFixed(2);
+        return `<li><span style="background:${colors[i % colors.length]}"></span> ${key}: ${value} (${percentage}%)</li>`;
+    }).join("") + "</ul>";
 }
 
 function loadThemeState() {
