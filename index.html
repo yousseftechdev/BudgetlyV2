@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <img src="img/bg.gif" alt="background animation" class="bg">
+    <header>
+        <h1>Budgetly V2</h1>
+        <nav>
+            <button onclick="location.href='pages/report.html'">View Report</button>
+            <button onclick="location.href='pages/aiChat.html'">AI Assistant</button>
+            <button onclick="location.href='pages/about.html'">About</button>
+            <button id="theme-toggle">Toggle Theme</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form-section">
+            <h2>Add Transaction</h2>
+            <form id="transaction-form" autocomplete="off">
+                <select id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <input type="text" id="category" placeholder="Category" required autocomplete="off">
+                <input type="number" id="amount" placeholder="Amount" required autocomplete="off">
+                <button type="submit">Add</button>
+            </form>
+        </section>
+
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>Total Income: <span id="total-income">0</span> EGP</p>
+            <p>Total Expenses: <span id="total-expense">0</span> EGP</p>
+            <p>Balance: <span id="balance">0</span> EGP</p>
+        </section>
+
+        <section id="transactions">
+            <h2>Transactions</h2>
+            <ul id="transaction-list"></ul>
+        </section>
+        <button class="clear-transactions" id="clear-transactions">Clear All Transactions</button>
+    </main>
+
+    <footer>
+        <p>© 2025 Budget Tracker. Made with ☕ & ❤️ by Youssef Tech.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

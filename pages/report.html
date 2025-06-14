@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Report</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .pie-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+    }
+
+    .pie-chart {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(#aaa 0% 100%);
+      position: relative;
+    }
+
+    .pie-chart::after {
+      content: '';
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      width: 50%;
+      height: 50%;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .legend {
+      text-align: left;
+    }
+
+    .legend ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .legend li {
+      margin: 0.5em 0;
+    }
+
+    .legend span {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Expense Report</h1>
+    <nav>
+      <a href="../index.html">← Back to Tracker</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Income vs Expenses</h2>
+      <div class="pie-container">
+        <div class="pie-chart" id="type-pie"></div>
+        <div class="legend" id="type-legend"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Income Category Breakdown</h2>
+      <div class="pie-container">
+        <div class="pie-chart" id="income-category-pie"></div>
+        <div class="legend" id="income-category-legend"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Expense Category Breakdown</h2>
+      <div class="pie-container">
+        <div class="pie-chart" id="expense-category-pie"></div>
+        <div class="legend" id="expense-category-legend"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Budget Tracker. Made with ☕ & ❤️ by Youssef Tech.</p>
+  </footer>
+
+  <script src="../js/report.js"></script>
+</body>
+</html>
