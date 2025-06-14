@@ -51,7 +51,7 @@ function applyTheme(isDark) {
     document.body.style.setProperty("--background-color", isDark ? "#2f3640" : "#f5f6fa");
     document.body.style.setProperty("--text-color", isDark ? "#f5f6fa" : "#2f3640");
     document.body.style.setProperty("--primary-color", isDark ? "#273c75" : "#00a8ff");
-    document.body.style.setProperty("--glass-bg", isDark ? "rgba(47, 54, 64, 0.7)" : "rgba(255, 255, 255, 0.7)");
+    document.body.style.setProperty("--glass-bg", isDark ? "rgba(47, 54, 64, 0.3)" : "rgba(255, 255, 255, 0.7)");
     typeInput.style.setProperty("color", isDark ? "#fff" : "#000");
     categoryInput.style.setProperty("color", isDark ? "#fff" : "#000");
     amountInput.style.setProperty("color", isDark ? "#fff" : "#000");

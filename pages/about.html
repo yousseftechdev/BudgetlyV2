@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Budgetly</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Budgetly</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-  <header>
-    <h1>About Budgetly</h1>
-    <nav>
-      <a href="../index.html">← Back to Tracker</a>
-    </nav>
-  </header>
+    <header>
+        <h1>About Budgetly</h1>
+        <nav>
+            <a href="../index.html">← Back to Tracker</a>
+        </nav>
+    </header>
 
-  <main>
-    <section style="margin-top: 0;">
-      <h2>About</h2>
-      <p>Budgetly is a simple and effective tool for tracking your income and expenses.</p>
-        <p>It's a remake of my HighSeas project but made specifically for Waffle'.</p>
-    </section>
-  </main>
+    <main>
+        <section style="margin-top: 0;">
+            <h2>About</h2>
+            <p>Budgetly is a simple and effective tool for tracking your income and expenses.</p>
+            <p>It's a remake of my HighSeas project, <a href="https://yousseftechdev.github.io/Budgetly">Budgetly</a>, but made specifically for Waffle'.</p>
+        </section>
+    </main>
 
-  <footer>
-    <p>© 2025 Budget Tracker. Made with ☕ & ❤️ by Youssef Tech.</p>
-  </footer>
+    <footer>
+        <p>© 2025 Budget Tracker. Made with ☕ & ❤️ by Youssef Tech.</p>
+    </footer>
 
-  <script>
-    function loadThemeState() {
-      const cookies = document.cookie.split("; ");
-      const match = cookies.find(c => c.startsWith("theme="));
-      return match ? match.split("=")[1] : "dark"; // Default to dark mode
-    }
+    <script>
+        function loadThemeState() {
+            const cookies = document.cookie.split("; ");
+            const match = cookies.find(c => c.startsWith("theme="));
+            return match ? match.split("=")[1] : "dark"; // Default to dark mode
+        }
 
-    function applyTheme(isDark) {
-      document.body.classList.toggle("dark-theme", isDark);
-      document.body.style.setProperty("--background-color", isDark ? "#2f3640" : "#f5f6fa");
-      document.body.style.setProperty("--text-color", isDark ? "#f5f6fa" : "#2f3640");
-      document.body.style.setProperty("--primary-color", isDark ? "#273c75" : "#00a8ff");
-      document.body.style.setProperty("--glass-bg", isDark ? "rgba(47, 54, 64, 0.7)" : "rgba(255, 255, 255, 0.7)");
-    }
+        function applyTheme(isDark) {
+            document.body.classList.toggle("dark-theme", isDark);
+            document.body.style.setProperty("--background-color", isDark ? "#2f3640" : "#f5f6fa");
+            document.body.style.setProperty("--text-color", isDark ? "#f5f6fa" : "#2f3640");
+            document.body.style.setProperty("--primary-color", isDark ? "#273c75" : "#00a8ff");
+            document.body.style.setProperty("--glass-bg", isDark ? "rgba(47, 54, 64, 0.7)" : "rgba(255, 255, 255, 0.7)");
+        }
 
-    // Apply theme on page load
-    applyTheme(loadThemeState() === "dark");
-  </script>
+        // Apply theme on page load
+        applyTheme(loadThemeState() === "dark");
+    </script>
 </body>
+
 </html>

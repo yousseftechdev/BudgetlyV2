@@ -25,6 +25,10 @@ header, footer {
 }
 
 header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
   font-size: 2em;
 }
 
@@ -42,10 +46,11 @@ nav a, nav button {
 
 nav button:hover {
   background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.2);
 }
 
 nav button:active {
-  transform: scale(0.95);
+  transform: scale(0.8);
 }
 
 main {
@@ -57,10 +62,10 @@ main {
 }
 
 section {
-  background: var(--glass-bg, rgba(255, 255, 255, 0.7));
+  background: var(--glass-bg, rgba(255, 255, 255, 0.3));
   padding: 20px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgb(255, 255, 255);
 }
 
 section:nth-child(1) {
